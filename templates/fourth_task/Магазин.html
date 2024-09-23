@@ -1,0 +1,25 @@
+
+{% extends "menu.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+
+<body text="white">
+{%block pagename%}
+<h1><i>{{text}}</i></h1>
+{%endblock%}
+        {%block menu%}
+        {{block.super}}
+        {%endblock%}
+{%block content%}
+<ul>
+    {%for i in games%}
+    <li><p>{{i}}<button>{{text5}}</button></p></li>
+    {%endfor%}
+</ul>
+<button><a href="http://127.0.0.1:8000/task4" style="text-decoration: none;"><h2>{{text4}}</h2></a></button>
+{%endblock%}
+</body>
+</html>
